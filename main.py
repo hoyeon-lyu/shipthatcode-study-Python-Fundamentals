@@ -1,13 +1,13 @@
-total = 0
+n = int(input())
 
-while True:
-    num = int(input())
-    if num == 0:
-        break
-    else:
-        total += num
+for row in range(1, n + 1):
+    for col_multiflier in range(1,n + 1):
+        whole_result = row * col_multiflier
+        letter_result = str(whole_result)[-1]
+        print(f"{letter_result}", end="")
+
+    # TODO: add an inner loop over the columns 1..n.
+    # Print each cell's digit without ending the line,
+    # and let the print() below close the row.
     
-# TODO: keep reading integers and adding them to total.
-# Stop as soon as the value you read is the sentinel, and leave it out of the total.
-
-print(total)
+    print()
