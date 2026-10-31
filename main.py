@@ -1,22 +1,11 @@
-# TODO: keep only letters, digits and spaces, lowercase them,
-# and join the words with single hyphens.
+item = input()
+qty = int(input())
+price = float(input())
 
-title = input()
+total = qty * price
 
-temp = ""
-for ch in title:
-    if not(ch.isalpha() or ch.isdigit() or ch == ' '):
-        continue
-    temp += ch.lower()
-
-l = temp.split(" ")
-temp_ = []
-for parts in l:
-    if parts == '':
-        continue
-    temp_.append(parts)
-
-title = "-".join(temp_)
-slug = title
-
-print(slug)
+# TODO: put the values into these three lines with f-strings.
+# The total must show exactly two digits after the decimal point.
+print("Item:", item)
+print("Quantity:", qty)
+print(f"Total: ${total:.2f}")
