@@ -1,13 +1,13 @@
-n = int(input())
+text = input()
+result = text
 
-for row in range(1, n + 1):
-    for col_multiflier in range(1,n + 1):
-        whole_result = row * col_multiflier
-        letter_result = str(whole_result)[-1]
-        print(f"{letter_result}", end="")
-
-    # TODO: add an inner loop over the columns 1..n.
-    # Print each cell's digit without ending the line,
-    # and let the print() below close the row.
+if len(text) > 1:
+    start_letter = text[0]
+    end_letter = text[-1]
+    result = end_letter + text[1:len(text)-1] + start_letter
     
-    print()
+# TODO: build a new string whose first and last characters are swapped,
+# with every character between them left where it is.
+# Remember that a very short string has nothing to swap.
+
+print(result)
