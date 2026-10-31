@@ -1,13 +1,22 @@
-text = input()
-result = text
+# TODO: keep only letters, digits and spaces, lowercase them,
+# and join the words with single hyphens.
 
-if len(text) > 1:
-    start_letter = text[0]
-    end_letter = text[-1]
-    result = end_letter + text[1:len(text)-1] + start_letter
-    
-# TODO: build a new string whose first and last characters are swapped,
-# with every character between them left where it is.
-# Remember that a very short string has nothing to swap.
+title = input()
 
-print(result)
+temp = ""
+for ch in title:
+    if not(ch.isalpha() or ch.isdigit() or ch == ' '):
+        continue
+    temp += ch.lower()
+
+l = temp.split(" ")
+temp_ = []
+for parts in l:
+    if parts == '':
+        continue
+    temp_.append(parts)
+
+title = "-".join(temp_)
+slug = title
+
+print(slug)
